@@ -1,3 +1,3 @@
 export const TicTacToe = () => {
-  return "This is tic tac toe";
+  return "This is tictactoe";
 };
