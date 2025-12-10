@@ -6,4 +6,8 @@
   max-width: 40rem;  /* ✅ keeps desktop size */
   background-color: #f0efeb;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
