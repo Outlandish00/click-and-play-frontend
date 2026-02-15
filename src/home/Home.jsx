@@ -19,9 +19,14 @@ export const Home = () => {
           <div className="link-title">Tic-Tac-Toe</div>
           <div className="link-body">Just a fun game of tic tac toe lmao</div>
         </div>
-        <div className="link-card">
-          <div className="link-title">Lorem Ipsums</div>
-          <div className="link-body">psumLoremIpsumLoremIpsumLoremIpsum</div>
+        <div
+          className="link-card"
+          onClick={() => {
+            navigate("/bomb-clearer");
+          }}
+        >
+          <div className="link-title">Bomb Clearer</div>
+          <div className="link-body">Clear the bombs!</div>
         </div>
         <div className="link-card">
           <div className="link-title">Lorem Ipsums</div>
