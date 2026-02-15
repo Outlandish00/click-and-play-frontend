@@ -8,7 +8,9 @@ import { useParams } from "react-router-dom";
 function App() {
   return (
     <div className="app-div">
-      <ApplicationViews />
+      <div className="app-main">
+        <ApplicationViews />
+      </div>
     </div>
   );
 }

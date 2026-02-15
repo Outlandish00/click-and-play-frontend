@@ -4,7 +4,11 @@ export const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="home-outer-container">
-      <div className="home-header-container">Click & Play</div>
+      <div className="home-header-container">
+        <span className="click">Click</span>{" "}
+        <span className="ampersand">&</span>
+        <span className="play">Play</span>
+      </div>
       <div className="link-card-container">
         <div
           className="link-card"
