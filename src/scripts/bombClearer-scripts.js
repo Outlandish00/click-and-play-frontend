@@ -61,7 +61,6 @@ export const bombGeneration = (board) => {
         newBoard[i] = bombCount;
       }
     }
-    console.log(newBoard);
     return newBoard;
   }
 };
