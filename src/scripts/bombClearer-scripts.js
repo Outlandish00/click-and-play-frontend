@@ -1,6 +1,5 @@
 export const bombGeneration = (board) => {
-  //
-  console.log("Board length:", board.length);
+  // creates the board and lays the bombs
   let newBoard = [...board];
   if (newBoard.length === 64) {
     let bombMax = 10;
@@ -17,6 +16,7 @@ export const bombGeneration = (board) => {
         bombTotal += 1; // increase bomb count
       }
     }
+    //generates the numbers for the amounts of surronding bombs
     for (let i = 0; i <= newBoard.length - 1; i++) {
       let row = Math.floor(i / 8);
       let col = i % 8;
@@ -76,6 +76,18 @@ export const printBoard = (board) => {
   }
 };
 
+export const checkGameOver = (board, revealedArray, clickedIndex) => {
+  if (board[clickedIndex] === "B") {
+    return "loss";
+  } else {
+    for (let i = 0; i < board.length; i++) {
+      if (revealedArray[i] === false && board[i] != "B") {
+        return "playing";
+      }
+    }
+    return "won";
+  }
+};
 // later checks
 //index - 8  (up)
 // index + 8  (down)
