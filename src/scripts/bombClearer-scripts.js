@@ -76,8 +76,8 @@ export const printBoard = (board) => {
   }
 };
 
-export const checkGameOver = (board, revealedArray, clickedIndex) => {
-  if (board[clickedIndex] === "B") {
+export const checkGameOver = (board, revealedArray, clickedIndex, flagMode) => {
+  if (board[clickedIndex] === "B" && flagMode != true) {
     return "loss";
   } else {
     for (let i = 0; i < board.length; i++) {

@@ -114,12 +114,16 @@ export const BombClearer = () => {
                     let newRevealedArray = [...revealedArray];
                     newRevealedArray[index] = true;
                     setRevealedArray(newRevealedArray);
-                    setGameStatus(checkGameOver(board, revealedArray, index));
+                    setGameStatus(
+                      checkGameOver(board, newRevealedArray, index, flagMode),
+                    );
                   } else {
                     let newRevealedArray = [...revealedArray];
                     newRevealedArray[index] = "🏴";
                     setRevealedArray(newRevealedArray);
-                    setGameStatus(checkGameOver(board, revealedArray, index));
+                    setGameStatus(
+                      checkGameOver(board, newRevealedArray, index, flagMode),
+                    );
                   }
                   if (gameStarted != true) {
                     setGameStarted(true);
